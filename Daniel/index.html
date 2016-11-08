@@ -13,12 +13,19 @@
 
 <script type="text/javascript">
 
+
+var parseTime = d3.timeParse("%d-%b-%y");
+  
 d3.csv("./stocks.csv",function(data)
 {
-  console.log(data)
+  data.forEach(function(d) {
+      d.date = parseTime(d.date);
+      d.close = +d.close;
 }
 );
-  
+
+
+
 var svgContainer = d3 .selectAll(".list") .append("svg") .attr("height",1000) .attr("width", 1000);
 
 svgContainer.append("circle") .attr('cx', 60).attr('cy', 60).attr('r', 50);
