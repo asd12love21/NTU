@@ -8,12 +8,21 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
+
+
+
 <script type="text/javascript">
-  
-  function hid3(){
-var svgContainer = d3 .select(".top") . append("svg")
+
+d3.csv("./stocks.csv",function(data)
+{
+  console.log(data)
 }
-hid3();
+);
+  
+var svgContainer = d3 .selectAll(".list") .append("svg") .attr("height",1000) .attr("width", 1000);
+}
+svgContainer.append("circle") .attr('cx', 60).attr('cy', 60).attr('r', 50);
+
 
 </script>
     <div class="top">網站名稱</div>
