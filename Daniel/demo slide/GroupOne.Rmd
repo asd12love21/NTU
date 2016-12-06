@@ -1,5 +1,5 @@
 ---
-title: "第一組"
+title: "GroupOne"
 author: "陳昊"
 date: "2016年12月6日"
 output: ioslides_presentation
